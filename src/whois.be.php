@@ -70,7 +70,7 @@ class be_handler
 		else
 			$r['regrinfo']['registered'] = 'no';
 
-		$r['regyinfo']['referrer'] = 'http://www.domain-registry.nl';
+		$r['regyinfo']['referrer'] = 'https://www.dnsbelgium.be';
 		$r['regyinfo']['registrar'] = 'DNS Belgium';
 		return $r;
 		}
