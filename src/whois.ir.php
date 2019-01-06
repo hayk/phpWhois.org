@@ -57,4 +57,3 @@ class ir_handler
 		return $r;
 		}
 	}
-?>

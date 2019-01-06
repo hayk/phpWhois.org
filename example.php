@@ -52,7 +52,7 @@ if (isSet($_GET['query']))
 
  	// get faster but less acurate results
  	$whois->deep_whois = empty($_GET['fast']);
- 	
+
  	// To use special whois servers (see README)
 	//$whois->UseServer('uk','whois.nic.uk:1043?{hname} {ip} {query}');
 	//$whois->UseServer('au','whois-check.ausregistry.net.au');
@@ -133,11 +133,11 @@ $final+=8+strlen($mark);
 
 if ($retmark===false)
 	$plantilla=substr($plantilla,0,$start).substr($plantilla,$final);
-else	
+else
 	{
 	if ($retmark=='') $retmark=$mark;
 	$plantilla=substr($plantilla,0,$start).'{'.$retmark.'}'.substr($plantilla,$final);
 	}
-	
+
 return $ret;
 }

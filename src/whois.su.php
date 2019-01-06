@@ -60,4 +60,3 @@ class su_handler
 		return $r;
 		}
 	}
-?>

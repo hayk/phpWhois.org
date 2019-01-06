@@ -49,7 +49,7 @@ class ve_handler
 		              );
 
 		$r['regrinfo'] = get_blocks($data_str['rawdata'], $items);
-				
+
 		if (!isset($r['regrinfo']['domain']['created']) || is_array($r['regrinfo']['domain']['created']))
 			{
 			$r['regrinfo'] = array ( 'registered' => 'no');
@@ -57,19 +57,18 @@ class ve_handler
 			}
 
 		$dns = array();
-		
+
 		foreach($r['regrinfo']['domain']['nserver'] as $nserv)
 			{
 			if ($nserv[0] == '-') $dns[] = $nserv;
 			}
-			
+
 		$r['regrinfo']['domain']['nserver'] = $dns;
 		$r['regrinfo'] = get_contacts($r['regrinfo']);
 		$r['regyinfo'] = array(
 			'referrer'		=>	'http://registro.nic.ve',
 			'registrar'		=>	'NIC-Venezuela - CNTI'
                );
-		return $r;		
+		return $r;
 		}
 	}
-?>

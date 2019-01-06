@@ -53,4 +53,3 @@ class godaddy_handler
 		return format_dates($r, 'dmy');
 		}
 	}
-?>

@@ -60,10 +60,10 @@ class nl_handler
 
 		if (isset($r['regrinfo']['zone']))
 			$r['regrinfo']['zone'] = $this->get_contact($r['regrinfo']['zone']);
-					
+
 		if (isset($r['regrinfo']['admin']))
 			$r['regrinfo']['admin'] = $this->get_contact($r['regrinfo']['admin']);
-				
+
 		if (isset($r['regrinfo']['owner']))
 			$r['regrinfo']['owner'] = $this->get_contact($r['regrinfo']['owner']);
 
@@ -85,4 +85,3 @@ class nl_handler
 		return $r;
 		}
 	}
-?>

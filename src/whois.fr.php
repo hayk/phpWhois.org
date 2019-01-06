@@ -75,4 +75,3 @@ class fr_handler
 		return $r;
 		}
 	}
-?>

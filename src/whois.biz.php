@@ -42,4 +42,3 @@ class biz_handler
 		return $r;
 		}
 	}
-?>

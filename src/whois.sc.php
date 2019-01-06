@@ -42,4 +42,3 @@ class sc_handler
 		return $r;
 		}
 	}
-?>

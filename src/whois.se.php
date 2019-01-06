@@ -55,4 +55,3 @@ class se_handler
 		return $r;
 		}
 	}
-?>

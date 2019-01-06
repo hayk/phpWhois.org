@@ -67,4 +67,3 @@ class mx_handler
 		return $r;
 		}
 	}
-?>

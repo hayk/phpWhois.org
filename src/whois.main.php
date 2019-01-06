@@ -323,5 +323,3 @@ class Whois extends WhoisClient
 			}
 		}
 	}
-
-?>

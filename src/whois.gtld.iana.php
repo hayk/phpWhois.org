@@ -48,4 +48,3 @@ class iana_handler
 		return easy_parser($data_str,$items,'Ymd',false,false,false,'owner');
 		}
 	}
-?>

@@ -75,4 +75,3 @@ class it_handler
 		return $r;
 		}
 	}
-?>

@@ -74,4 +74,3 @@ class afrinic_handler
 		return $r;
 		}
 	}
-?>

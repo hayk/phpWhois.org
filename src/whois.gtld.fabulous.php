@@ -51,4 +51,3 @@ class fabulous_handler
 		return $r;
 		}
 	}
-?>

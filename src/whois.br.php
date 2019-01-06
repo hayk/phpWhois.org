@@ -81,4 +81,3 @@ class br_handler
 		return $a;
 		}
 	}
-?>

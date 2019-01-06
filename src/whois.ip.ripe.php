@@ -82,4 +82,3 @@ class ripe_handler
 		return $r;
 		}
 	}
-?>

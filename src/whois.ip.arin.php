@@ -75,4 +75,3 @@ class arin_handler
 		return array( 'regrinfo' => $r );
 		}
 	}
-?>

@@ -44,4 +44,3 @@ class mobi_handler
 		return $r;
 		}
 	}
-?>

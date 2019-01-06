@@ -76,4 +76,3 @@ class lacnic_handler
 		return $r;
 		}
 	}
-?>

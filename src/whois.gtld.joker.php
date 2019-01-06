@@ -75,4 +75,3 @@ class joker_handler
 		return $r;
 		}
 	}
-?>

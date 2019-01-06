@@ -60,4 +60,3 @@ class ru_handler
 		return $r;
 		}
 	}
-?>

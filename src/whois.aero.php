@@ -42,4 +42,3 @@ class aero_handler
 		return $r;
 		}
 	}
-?>

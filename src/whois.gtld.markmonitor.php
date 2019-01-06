@@ -62,4 +62,3 @@ class markmonitor_handler
 		return $r;
 		}
 	}
-?>

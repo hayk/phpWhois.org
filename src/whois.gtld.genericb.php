@@ -37,4 +37,3 @@ class genericb_handler
 		return generic_parser_b($data_str);
 		}
 	}
-?>

@@ -48,4 +48,3 @@ class srsplus_handler
 		return easy_parser($data_str, $items, 'ymd',false,true,true);
 		}
 	}
-?>

@@ -53,4 +53,3 @@ class name_handler
 		return easy_parser($data_str, $items, 'y-m-d', $extra, false, true);
 		}
 	}
-?>

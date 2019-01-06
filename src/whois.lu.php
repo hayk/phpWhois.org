@@ -75,4 +75,3 @@ class lu_handler
 		return $r;
 		}
 	}
-?>

@@ -99,4 +99,3 @@ class nz_handler
 		return $r;
 		}
 	}
-?>

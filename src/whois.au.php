@@ -59,5 +59,3 @@ class au_handler
 		return $r;
 		}
 	}
-
-?>

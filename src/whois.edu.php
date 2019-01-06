@@ -59,4 +59,3 @@ class edu_handler
 		return ($r);
 		}
 	}
-?>

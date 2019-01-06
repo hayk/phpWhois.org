@@ -61,4 +61,3 @@ class org_za_handler
 		return $r;
 		}
 	}
-?>

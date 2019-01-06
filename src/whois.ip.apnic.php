@@ -120,4 +120,3 @@ class apnic_handler
 		return $r;
 		}
 }
-?>

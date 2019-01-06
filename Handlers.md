@@ -13,7 +13,7 @@ Common Object Model
 -------------------
 
 The keys that you could find in the result array returned by phpWhois
-are 'rawdata' , 'regyinfo' and 'regrinfo'. 
+are 'rawdata' , 'regyinfo' and 'regrinfo'.
 
 rawdata is always returned as it's filled by phpWhois itself. It
 contains the raw text output returned by the whois server.
@@ -64,11 +64,11 @@ network
 Only when dealing with ip addresses. Could contain the
 following subkeys:
 
-	name	-> network/AS name		
+	name	-> network/AS name
 	inetnum	-> network ip address range
 	desc	-> network description
 	mnt-by	-> who provided that network
-	mnt-lower> who provided that network 
+	mnt-lower> who provided that network
 	nserver -> name servers in listed order that
 			provide inverse resolution for that net
 	status	-> status of the network (registry dependant)
@@ -134,7 +134,7 @@ If you write a new handler, please try to map as many as possible
 returned data to keys defined by the 'Common Object Model'. You can
 create new keys if need, but please do not do create new keys where
 existing predefined keys exists. Nevertheless all handlers submited
-will be checked before they are added to phpWhois distribution. 
+will be checked before they are added to phpWhois distribution.
 
 If some tld needs special parameters or can be queried in
 another whois servers or web base whois servers you can setup
@@ -193,8 +193,8 @@ handlers, those functions are stored on the following files:
   nserver:        ns9.univie.ac.at
   changed:        20030616 12:54:18
   source:         AT-DOM
- 
-  personname:     
+
+  personname:
   organization:   NIC.AT Internet Verwaltungs- und Betriebsges.m.b.H.
   street address: Jakob-Haringerstrasse 8
   postal code:    A-5020
@@ -206,33 +206,33 @@ handlers, those functions are stored on the following files:
   nic-hdl:        NAIV1117337-NICAT
   changed:        20020614 17:29:04
   source:         AT-DOM
- 
+
   personname:     NIC.AT Role
-  organization:   
+  organization:
   street address: NIC.AT Internet Verwaltungs- und Betriebsgesellschaft m.b.H.
   street address: Jakob-Haringerstrasse 8
   street address: A-5020 Salzburg
   street address: Austria
-  postal code:    
-  city:           
-  country:        
+  postal code:
+  city:
+  country:
   phone:          +43 662 4669 0
   fax-no:         +43 662 4669 19
   e-mail:         nic-at@nic.at
   nic-hdl:        NAR567002-NICAT
   changed:        20010223 12:52:13
   source:         AT-DOM
- 
+
   personname:     Gerhard Winkler
-  organization:   
+  organization:
   street address: Vienna University
   street address: Computer Center - ACOnet
   street address: Universitaetsstrasse 7
   street address: A-1010 Vienna
   street address: Austria
-  postal code:    
-  city:           
-  country:        
+  postal code:
+  city:
+  country:
   phone:          +43 1 4277 140 35
   fax-no:         +43 1 4277 9140
   e-mail:         gerhard.winkler@univie.ac.at
@@ -312,7 +312,7 @@ handlers, those functions are stored on the following files:
   Last Updated by Registrar:                   NEULEVELCSR
   Domain Registration Date:                    Wed Nov 07 00:01:00 GMT 2001
   Domain Expiration Date:                      Sat Nov 06 23:59:00 GMT 2004
-  Domain Last Updated Date:                    Fri Nov 07 18:59:11 GMT 2003 
+  Domain Last Updated Date:                    Fri Nov 07 18:59:11 GMT 2003
 </pre>
 
 - get_blocks/get_contacts:

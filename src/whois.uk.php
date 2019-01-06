@@ -77,4 +77,3 @@ class uk_handler
 		return $r;
 		}
 	}
-?>

@@ -75,4 +75,3 @@ class fastdomain_handler
 		return $r;
 		}
 	}
-?>

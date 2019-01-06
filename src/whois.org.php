@@ -44,4 +44,3 @@ class org_handler
 		return $r;
 		}
 	}
-?>

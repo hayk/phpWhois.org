@@ -87,4 +87,3 @@ class nu_handler
 		return $r;
 		}
 	}
-?>

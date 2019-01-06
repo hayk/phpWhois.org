@@ -50,4 +50,3 @@ class hu_handler
 		return $r;
 		}
 	}
-?>

@@ -252,4 +252,3 @@ $this->WHOIS_NON_ICANN = array (
 		'voyage'	=> 'http://www.new.net/search_whois.tp?domain={domain}&tld={tld}',
 		'z'			=> 'http://www.adns.net/whois.php?txtDOMAIN={domain}.{tld}'
 		);
-?>

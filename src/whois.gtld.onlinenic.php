@@ -80,4 +80,3 @@ class onlinenic_handler
 		return $r;
 		}
 	}
-?>

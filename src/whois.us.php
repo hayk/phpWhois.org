@@ -41,4 +41,3 @@ class us_handler
 		return $r;
 		}
 	}
-?>

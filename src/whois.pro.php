@@ -40,4 +40,3 @@ class pro_handler
 		return $r;
 		}
 	}
-?>

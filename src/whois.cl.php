@@ -53,4 +53,3 @@ class cl_handler
 		return $r;
 		}
 	}
-?>

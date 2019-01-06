@@ -40,4 +40,3 @@ class travel_handler
 		return $r;
 		}
 	}
-?>

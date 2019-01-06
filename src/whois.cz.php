@@ -70,4 +70,3 @@ class cz_handler
 		return $r;
 		}
 	}
-?>

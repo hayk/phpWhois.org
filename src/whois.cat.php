@@ -44,4 +44,3 @@ class cat_handler
 		return $r;
 		}
 	}
-?>

@@ -48,4 +48,3 @@ class assorted_handler
 		return easy_parser($data_str, $items, 'ymd',false,false,true);
 		}
 	}
-?>

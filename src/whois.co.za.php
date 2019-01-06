@@ -70,4 +70,3 @@ class co_Za_handler
 		return $r;
 		}
 	}
-?>

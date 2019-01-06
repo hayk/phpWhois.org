@@ -79,4 +79,3 @@ class ch_handler
 		return $r;
 		}
 	}
-?>

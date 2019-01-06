@@ -55,4 +55,3 @@ class opensrs_handler
 		return $r;
 		}
 	}
-?>

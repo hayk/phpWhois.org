@@ -64,4 +64,3 @@ class fj_handler
 		return $r;
 		}
 	}
-?>

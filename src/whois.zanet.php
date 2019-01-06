@@ -87,4 +87,3 @@ class zanet_handler
 		return $r;
 		}
 	}
-?>

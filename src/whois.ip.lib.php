@@ -27,16 +27,16 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 //-----------------------------------------------------------------
 // Check if ip adddress is valid
-	
+
 function phpwhois_validip($ip)
 {
 
 	if (empty($ip))
 		return false;
-	
+
 	if ((ip2long($ip) == -1) or (ip2long($ip) === false))
 		return false;
-		
+
 	$reserved_ips = array (
 			array('0.0.0.0','2.255.255.255'),
 			array('10.0.0.0','10.255.255.255'),
@@ -47,7 +47,7 @@ function phpwhois_validip($ip)
 			array('192.168.0.0','192.168.255.255'),
 			array('255.255.255.0','255.255.255.255')
 			);
-			
+
 	foreach ($reserved_ips as $r)
 		{
 		$min = ip2long($r[0]);
@@ -60,29 +60,29 @@ function phpwhois_validip($ip)
 
 //-----------------------------------------------------------------
 // Get real client ip address
-	
+
 function phpwhois_getclientip()
 {
 	if (!empty($_SERVER['HTTP_CLIENT_IP']) && phpwhois_validip($_SERVER['HTTP_CLIENT_IP']))
 			return $_SERVER['HTTP_CLIENT_IP'];
-   
+
 	if (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
 		foreach (explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']) as $ip)
 			if (phpwhois_validip(trim($ip)))
 				return $ip;
-		
+
    if (!empty($_SERVER['HTTP_X_FORWARDED']) && phpwhois_validip($_SERVER['HTTP_X_FORWARDED']))
        return $_SERVER['HTTP_X_FORWARDED'];
-       
+
    if (!empty($_SERVER['HTTP_FORWARDED_FOR']) && phpwhois_validip($_SERVER['HTTP_FORWARDED_FOR']))
        return $_SERVER['HTTP_FORWARDED_FOR'];
-       
+
    if (!empty($_SERVER['HTTP_FORWARDED']) && phpwhois_validip($_SERVER['HTTP_FORWARDED']))
        return $_SERVER['HTTP_FORWARDED'];
-   
+
    if (!empty($_SERVER['HTTP_X_FORWARDED']) && phpwhois_validip($_SERVER['HTTP_X_FORWARDED']))
        return $_SERVER['HTTP_X_FORWARDED'];
-   
+
    return $_SERVER['REMOTE_ADDR'];
 }
 
@@ -117,4 +117,3 @@ function phpwhois_cidr_conv($net)
 
 	return $start." - ".long2ip(bindec($final));
 }
-?>

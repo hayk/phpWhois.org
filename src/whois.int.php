@@ -41,4 +41,3 @@ class int_handler
 		return ($r);
 		}
 	}
-?>

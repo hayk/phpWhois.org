@@ -78,4 +78,3 @@ class gtld_handler extends WhoisClient
 		return $this->result;
 		}
 	}
-?>

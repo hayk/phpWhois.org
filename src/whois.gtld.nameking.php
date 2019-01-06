@@ -67,4 +67,3 @@ class nameking_handler
 		return easy_parser($data_str, $items, 'mdy', $extra, false, true);
 		}
 	}
-?>

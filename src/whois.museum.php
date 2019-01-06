@@ -42,4 +42,3 @@ class museum_handler
 		return $r;
 		}
 	}
-?>

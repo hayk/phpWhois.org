@@ -103,4 +103,3 @@ array_splice($data_str['rawdata'],18,1);
 		return $r;
 		}
 	}
-?>

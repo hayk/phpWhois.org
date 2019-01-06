@@ -55,4 +55,3 @@ class rwhois_handler
 		return array( 'regrinfo' => $res );
 		}
 	}
-?>

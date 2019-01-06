@@ -82,4 +82,3 @@ class eu_handler
 		return $r;
 		}
 	}
-?>

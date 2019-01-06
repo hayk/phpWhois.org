@@ -56,4 +56,3 @@ class domainpeople_handler
 		return $r;
 		}
 	}
-?>

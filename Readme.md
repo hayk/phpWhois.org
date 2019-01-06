@@ -99,7 +99,7 @@ The currently known whois services that offer special acccess are:
   that allow to pass the real client ip address. This feature is only
   available to registered gateways. If you are registered you can use
   this service when querying ripe ip addresses that way:
-  
+
   $whois = new Whois();
   $whois->UseServer('uk','whois.ripe.net?-V{version},{ip} {query}');
   $result = $whois->Lookup('62.97.102.115');
@@ -129,7 +129,7 @@ This new feature also allows you to use a different whois server than
 the preconfigured or discovered one by just calling whois->UseServer
 and passing the tld and the server and args to use for the named tld.
 For example you could use another whois server for .au domains that
-does not limit the number of requests (but provides no owner 
+does not limit the number of requests (but provides no owner
 information) using this:
 
   $whois = new Whois();
@@ -175,15 +175,15 @@ PHPWhois will assume that all whois servers resturn UTF-8 encoded output,
 if some whois server does not return UTF-8 data, you can include it in
 the NON_UTF8 array in whois.servers.php
 
-Notes 
+Notes
 -----
 
 There is an extended class called "whois.utils.php" which contains a
 debugging function called showObject(), if you showObject($result)
-it will output the total layout of the returned object to the 
+it will output the total layout of the returned object to the
 web browser.
 
-The latest version of the package and a demo script resides at 
+The latest version of the package and a demo script resides at
 <http://phpwhois.sourceforge.net/>
 
 There is also be an article describing the package on devshed.com

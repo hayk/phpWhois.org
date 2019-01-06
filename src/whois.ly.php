@@ -69,4 +69,3 @@ class ly_handler
 		return $r;
 		}
 	}
-?>

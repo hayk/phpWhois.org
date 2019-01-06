@@ -286,4 +286,3 @@ class ip_handler extends WhoisClient
 		return $result;
 		}
 	}
-?>

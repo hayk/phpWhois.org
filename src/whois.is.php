@@ -66,4 +66,3 @@ class is_handler
 		return $r;
 		}
 	}
-?>

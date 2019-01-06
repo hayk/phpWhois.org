@@ -55,4 +55,3 @@ class ae_handler
 		return $r;
 		}
 	}
-?>

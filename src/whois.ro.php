@@ -96,4 +96,3 @@ class ro_handler
 		return $r;
 		}
 	}
-?>

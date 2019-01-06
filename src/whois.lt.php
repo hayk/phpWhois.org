@@ -61,4 +61,3 @@ class lt_handler
 		return $r;
 		}
 	}
-?>

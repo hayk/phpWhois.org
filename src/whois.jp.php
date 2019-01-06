@@ -108,4 +108,3 @@ class jp_handler extends WhoisClient
 		return $r;
 		}
 	}
-?>

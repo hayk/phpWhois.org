@@ -51,4 +51,3 @@ class names4ever_handler
 		return easy_parser($data_str, $items, 'dmy', false, false, true);
 		}
 	}
-?>

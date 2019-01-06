@@ -44,4 +44,3 @@ class xxx_handler
 		return $r;
 		}
 	}
-?>

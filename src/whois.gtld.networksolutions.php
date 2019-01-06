@@ -47,4 +47,3 @@ class networksolutions_handler
 		return easy_parser($data_str, $items, 'dmy',false,true,true);
 		}
 	}
-?>

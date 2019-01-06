@@ -42,4 +42,3 @@ class tel_handler
 		return $r;
 		}
 	}
-?>

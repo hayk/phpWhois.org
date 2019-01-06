@@ -56,4 +56,3 @@ class bh_handler
 		return $r;
 		}
 	}
-?>

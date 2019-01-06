@@ -54,4 +54,3 @@ class publicdomainregistry_handler
 		return easy_parser($data_str, $items, 'mdy', false, true, true);
 		}
 	}
-?>

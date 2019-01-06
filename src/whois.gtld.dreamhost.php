@@ -51,4 +51,3 @@ class dreamhost_handler
 		return $r;
 		}
 	}
-?>
