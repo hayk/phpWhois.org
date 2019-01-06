@@ -42,7 +42,8 @@ $this->DATA = array(
 	'za.org'	=> 'zanet',
 	'za.net'	=> 'zanet',
 	// Punycode
-	'xn--p1ai' => 'ru'
+	'xn--p1ai' => 'ru', // рф
+	'xn--80ao21a' => 'kz', // қаз
 	);
 
 /* Non UTF-8 servers */
@@ -86,16 +87,20 @@ $this->WHOIS_SPECIAL = array(
 		'bj'	 => 'whois.nic.bj',
 		'by'	 => '',
 		'bz'	 => 'whois2.afilias-grs.net',
+		'cc'	 => 'ccwhois.verisign-grs.com',
 		'cy'	 => '',
 		'es'	 => '',
 		'fj'	 => 'whois.usp.ac.fj',
 		'fm'     => 'http://www.dot.fm/query_whois.cfm?domain={domain}&tld=fm',
 		'jobs'	 => 'jobswhois.verisign-grs.com',
+		'io'	 => 'whois.nic.io',
+		'kz'	 => 'whois.nic.kz',
 		'ke'	 => 'kenic.or.ke',
 		'la'	 => 'whois.centralnic.net',
 		'gr'	 => '',
 		'gs'     => 'http://www.adamsnames.tc/whois/?domain={domain}.gs',
 		'gt'	 => 'http://www.gt/Inscripcion/whois.php?domain={domain}.gt',
+		'md'	 => 'whois.nic.md',
 		'me'	 => 'whois.meregistry.net',
 		'mobi'	 => 'whois.dotmobiregistry.net',
 		'ms'     => 'http://www.adamsnames.tc/whois/?domain={domain}.ms',
@@ -105,11 +110,14 @@ $this->WHOIS_SPECIAL = array(
 		'pe'	 => 'kero.rcp.net.pe',
 		'pr'	 => 'whois.uprr.pr',
 		'pro'	 => 'whois.registry.pro',
+		'pw'	 => 'whois.nic.pw',
 		'sc'     => 'whois2.afilias-grs.net',
 		'tc'     => 'http://www.adamsnames.tc/whois/?domain={domain}.tc',
 		'tf'     => 'http://www.adamsnames.tc/whois/?domain={domain}.tf',
+		'tm'	 => 'whois.nic.tm',
 		've'	 => 'whois.nic.ve',
 		'vg'     => 'http://www.adamsnames.tc/whois/?domain={domain}.vg',
+		'ua'     => 'whois.ua',
 		// Second level
 		'net.au' => 'whois.aunic.net',
 		'ae.com' => 'whois.centralnic.net',
@@ -135,6 +143,8 @@ $this->WHOIS_SPECIAL = array(
 		'uk.net' => 'whois.centralnic.net',
 		'za.net' => 'whois.za.net',
 		'za.org' => 'whois.za.net',
+		'co.ua'  => 'whois.co.ua',
+		'com.ua' => 'whois.ua',
 		'co.za'  => 'http://co.za/cgi-bin/whois.sh?Domain={domain}.co.za',
 		'org.za' => 'http://www.org.za/cgi-bin/rwhois?domain={domain}.org.za&format=full'
 		);
