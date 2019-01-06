@@ -47,7 +47,7 @@ ws		samoanic.ws surf.ws
 co.za		sex.co.za
 org.za		sex.org.za
 
-// Punicode
+// Punycode
 
 xn--p1ai 	xn--c1ad6a.xn--p1ai
 
