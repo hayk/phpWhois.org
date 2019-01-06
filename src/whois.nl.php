@@ -46,7 +46,7 @@ class nl_handler
 		            );
 
 		$r['regrinfo'] = get_blocks($data['rawdata'], $items);
-		$r['regyinfo']['referrer'] = 'http://www.domain-registry.nl';
+		$r['regyinfo']['referrer'] = 'https://www.sidn.nl/';
 		$r['regyinfo']['registrar'] = 'Stichting Internet Domeinregistratie NL';
 
 		if (!isset($r['regrinfo']['domain']['status']))
