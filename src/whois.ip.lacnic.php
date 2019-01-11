@@ -1,6 +1,6 @@
 <?php
 /*
-Whois.php        PHP classes to conduct whois queries
+Whois.php		PHP classes to conduct whois queries
 
 Copyright (C)1999,2005 easyDNS Technologies Inc. & Mark Jeftovic
 
@@ -17,40 +17,42 @@ of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 require_once('whois.parser.php');
 
 if (!defined('__LACNIC_HANDLER__'))
+{
 	define('__LACNIC_HANDLER__', 1);
+}
 
 class lacnic_handler
-	{
+{
 	function parse($data_str, $query)
-		{
-		$translate = array(
-                      'fax-no' => 'fax',
-                      'e-mail' => 'email',
-                      'nic-hdl-br' => 'handle',
-                      'nic-hdl' => 'handle',
-                      'person' => 'name',
-                      'netname' => 'name',
-                      'descr' => 'desc',
-                      'country' => 'address.country'
-		                  );
+	{
+		$translate = [
+			'fax-no' => 'fax',
+			'e-mail' => 'email',
+			'nic-hdl-br' => 'handle',
+			'nic-hdl' => 'handle',
+			'person' => 'name',
+			'netname' => 'name',
+			'descr' => 'desc',
+			'country' => 'address.country',
+		];
 
-		$contacts = array(
-                      'owner-c' => 'owner',
-                      'tech-c' => 'tech',
-                      'abuse-c' => 'abuse',
-                      'admin-c' => 'admin'
-		                  );
+		$contacts = [
+			'owner-c' => 'owner',
+			'tech-c' => 'tech',
+			'abuse-c' => 'abuse',
+			'admin-c' => 'admin',
+		];
 
 		$r = generic_parser_a($data_str, $translate, $contacts, 'network');
 
@@ -65,14 +67,18 @@ class lacnic_handler
 		unset($r['network']['inetrev']);
 
 		if (!empty($r['network']['aut-num']))
+		{
 			$r['network']['handle'] = $r['network']['aut-num'];
+		}
 
 		if (isset($r['network']['nserver']))
+		{
 			$r['network']['nserver'] = array_unique($r['network']['nserver']);
+		}
 
-		$r = array( 'regrinfo' => $r );
+		$r = [ 'regrinfo' => $r ];
 		$r['regyinfo']['type'] ='ip';
 		$r['regyinfo']['registrar'] = 'Latin American and Caribbean IP address Regional Registry';
 		return $r;
-		}
 	}
+}

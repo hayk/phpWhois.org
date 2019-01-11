@@ -1,6 +1,6 @@
 <?php
 /*
-Whois.php        PHP classes to conduct whois queries
+Whois.php		PHP classes to conduct whois queries
 
 Copyright (C)1999,2005 easyDNS Technologies Inc. & Mark Jeftovic
 
@@ -17,41 +17,43 @@ of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 if (!defined('__AE_HANDLER__'))
+{
 	define('__AE_HANDLER__', 1);
+}
 
 require_once('whois.parser.php');
 
 class ae_handler
-	{
+{
 	function parse($data_str, $query)
-		{
-		$items = array(
-                    'Domain Name:'		=> 'domain.name',
-                    'Registrar Name:'	=> 'domain.sponsor',
-                    'Status:'			=> 'domain.status',
-                    'Registrant Contact ID:'	=> 'owner.handle',
-                    'Registrant Contact Name:' => 'owner.name',
-                    'Tech Contact Name:'		=> 'tech.name',
-                    'Tech Contact ID:'			=> 'tech.handle',
-                    'Name Server:'		=> 'domain.nserver.'
-		              );
+	{
+		$items = [
+			'Domain Name:'			=> 'domain.name',
+			'Registrar Name:'		=> 'domain.sponsor',
+			'Status:'			=> 'domain.status',
+			'Registrant Contact ID:'	=> 'owner.handle',
+			'Registrant Contact Name:'	=> 'owner.name',
+			'Tech Contact Name:'		=> 'tech.name',
+			'Tech Contact ID:'		=> 'tech.handle',
+			'Name Server:'			=> 'domain.nserver.',
+		];
 
 		$r['regrinfo'] = generic_parser_b($data_str['rawdata'], $items, 'ymd');
 
-		$r['regyinfo'] = array(
-                    'referrer' => 'http://www.nic.ae',
-                    'registrar' => 'UAENIC'
-                    );
+		$r['regyinfo'] = [
+			'referrer' => 'http://www.nic.ae',
+			'registrar' => 'UAENIC',
+		];
 
 		return $r;
-		}
 	}
+}

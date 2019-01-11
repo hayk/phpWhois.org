@@ -1,6 +1,6 @@
 <?php
 /*
-Whois.php        PHP classes to conduct whois queries
+Whois.php		PHP classes to conduct whois queries
 
 Copyright (C)1999,2005 easyDNS Technologies Inc. & Mark Jeftovic
 
@@ -17,12 +17,12 @@ of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 /*
@@ -32,15 +32,17 @@ BUG
 */
 
 if (!defined('__IT_HANDLER__'))
+{
 	define('__IT_HANDLER__', 1);
+}
 
 require_once('whois.parser.php');
 
 class it_handler
-	{
+{
 	function parse($data_str, $query)
-		{
-		$items = array(
+	{
+		$items = [
 			'domain.name' =>	'Domain:',
 			'domain.nserver' =>	'Nameservers',
 			'domain.status' =>	'Status:',
@@ -48,30 +50,31 @@ class it_handler
 			'owner' 	=>	'Registrant',
 			'admin' 	=>	'Admin Contact',
 			'tech' 		=>	'Technical Contacts',
-			'registrar' =>	'Registrar'
-		            );
+			'registrar' =>	'Registrar',
+		];
 
-		$extra = array(
+		$extra = [
 			'address:' 		=> 'address.',
 			'contactid:'	=> 'handle',
 			'organization:' => 'organization',
 			'created:'		=> 'created',
 			'last update:' 	=> 'changed',
-			'web:'			=> 'web'
-		            );
+			'web:'			=> 'web',
+		];
 
 		$r['regrinfo'] = easy_parser($data_str['rawdata'], $items, 'ymd',$extra);
 
 		if (isset($r['regrinfo']['registrar']))
-			{
+		{
 			$r['regrinfo']['domain']['registrar'] = $r['regrinfo']['registrar'];
 			unset($r['regrinfo']['registrar']);
-			}
-
-		$r['regyinfo'] = array(
-                  'registrar' => 'IT-Nic',
-                  'referrer' => 'http://www.nic.it/'
-                  );
-		return $r;
 		}
+
+
+		$r['regyinfo'] = [
+			'referrer' => 'http://www.nic.it/',
+			'registrar' => 'IT-Nic',
+		];
+		return $r;
 	}
+}

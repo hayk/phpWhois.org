@@ -1,6 +1,6 @@
 <?php
 /*
-Whois.php        PHP classes to conduct whois queries
+Whois.php		PHP classes to conduct whois queries
 
 Copyright (C)1999,2005 easyDNS Technologies Inc. & Mark Jeftovic
 
@@ -17,53 +17,59 @@ of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 if (!defined('__MX_HANDLER__'))
+{
 	define('__MX_HANDLER__', 1);
+}
 
 require_once('whois.parser.php');
 
 class mx_handler
-	{
+{
 	function parse($data_str, $query)
-		{
-		$items = array(
-						'owner'	=> 'Registrant:',
-						'admin'	=> 'Administrative Contact:',
-						'tech'	=> 'Technical Contact:',
-						'billing' => 'Billing Contact:',
-						'domain.nserver' => 'Name Servers:',
-						'domain.created' => 'Created On:',
-						'domain.expires' => 'Expiration Date:',
-						'domain.changed' => 'Last Updated On:',
-						'domain.sponsor' => 'Registrar:'
-						);
+	{
+		$items = [
+			'owner'	=> 'Registrant:',
+			'admin'	=> 'Administrative Contact:',
+			'tech'	=> 'Technical Contact:',
+			'billing' => 'Billing Contact:',
+			'domain.nserver' => 'Name Servers:',
+			'domain.created' => 'Created On:',
+			'domain.expires' => 'Expiration Date:',
+			'domain.changed' => 'Last Updated On:',
+			'domain.sponsor' => 'Registrar:',
+		];
 
-		$extra = array(
-						'city:' => 'address.city',
-						'state:'	=> 'address.state',
-						'dns:'	=> '0'
-						);
+		$extra = [
+			'city:'		=> 'address.city',
+			'state:'	=> 'address.state',
+			'dns:'		=> '0',
+		];
 
 		$r['regrinfo'] = easy_parser($data_str['rawdata'],$items,'dmy',$extra);
 
-		$r['regyinfo'] = array(
-                  'registrar' => 'NIC Mexico',
-                  'referrer' => 'http://www.nic.mx/'
-                  );
+		$r['regyinfo'] = [
+			'referrer' => 'NIC Mexico',
+			'registrar' => 'http://www.nic.mx/',
+		];
 
 		if (empty($r['regrinfo']['domain']['created']))
+		{
 			$r['regrinfo']['registered'] = 'no';
+		}
 		else
+		{
 			$r['regrinfo']['registered'] = 'yes';
+		}
 
 		return $r;
-		}
 	}
+}

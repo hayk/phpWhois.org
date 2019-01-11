@@ -1,6 +1,6 @@
 <?php
 /*
-Whois.php        PHP classes to conduct whois queries
+Whois.php		PHP classes to conduct whois queries
 
 Copyright (C)1999,2005 easyDNS Technologies Inc. & Mark Jeftovic
 
@@ -17,12 +17,12 @@ of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 if (!defined('__ITSYOURDOMAIN_HANDLER__'))
@@ -31,21 +31,21 @@ if (!defined('__ITSYOURDOMAIN_HANDLER__'))
 require_once('whois.parser.php');
 
 class itsyourdomain_handler
-	{
+{
 	function parse($data_str, $query)
-		{
-		$items = array(
-                'owner' => 'Registrant',
-                'admin' => 'Administrative',
-                'tech' => 'Technical',
-                'billing' => 'Billing',
-                'domain.name' => 'Domain:',
-                'domain.nserver.' => 'Domain Name Servers:',
-                'domain.created' => 'Record created on ',
-                'domain.expires' => 'Record expires on ',
-                'domain.changed' => 'Record last updated on '
-		            );
+	{
+		$items = [
+			'owner' => 'Registrant',
+			'admin' => 'Administrative',
+			'tech' => 'Technical',
+			'billing' => 'Billing',
+			'domain.name' => 'Domain:',
+			'domain.nserver.' => 'Domain Name Servers:',
+			'domain.created' => 'Record created on ',
+			'domain.expires' => 'Record expires on ',
+			'domain.changed' => 'Record last updated on ',
+		];
 
 		return easy_parser($data_str, $items, 'mdy');
-		}
 	}
+}

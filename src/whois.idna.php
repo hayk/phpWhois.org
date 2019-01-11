@@ -60,7 +60,7 @@ class idna_convert
      * @var array
      * @access private
      */
-    var $NP = array();
+    var $NP = [];
 
     // Internal settings, do not mess with them
     var $_punycode_prefix = 'xn--';
@@ -125,7 +125,7 @@ class idna_convert
     function set_parameter($option, $value = false)
     {
         if (!is_array($option)) {
-            $option = array($option => $value);
+            $option = [ $option => $value ];
         }
         foreach ($option as $k => $v) {
             switch ($k) {
@@ -377,7 +377,7 @@ class idna_convert
                 $decoded[] = ord($encoded{$k});
             }
         } else {
-            $decoded = array();
+            $decoded = [];
         }
         $deco_len = count($decoded);
         $enco_len = strlen($encoded);
@@ -560,7 +560,7 @@ class idna_convert
      */
     function _nameprep($input)
     {
-        $output = array();
+        $output = [];
         $error = false;
         //
         // Mapping
@@ -646,9 +646,9 @@ class idna_convert
     {
         $sindex = (int) $char - $this->_sbase;
         if ($sindex < 0 || $sindex >= $this->_scount) {
-            return array($char);
+            return [ $char ];
         }
-        $result = array();
+        $result = [];
         $result[] = (int) $this->_lbase + $sindex / $this->_ncount;
         $result[] = (int) $this->_vbase + ($sindex % $this->_ncount) / $this->_tcount;
         $T = intval($this->_tbase + $sindex % $this->_tcount);
@@ -665,8 +665,8 @@ class idna_convert
     function _hangul_compose($input)
     {
         $inp_len = count($input);
-        if (!$inp_len) return array();
-        $result = array();
+        if (!$inp_len) return [];
+        $result = [];
         $last = (int) $input[0];
         $result[] = $last; // copy first char from input to output
 
@@ -787,7 +787,7 @@ class idna_convert
      */
     function _utf8_to_ucs4($input)
     {
-        $output = array();
+        $output = [];
         $out_len = 0;
         $inp_len = strlen($input);
         $mode = 'next';
@@ -917,7 +917,7 @@ class idna_convert
       */
     function _ucs4_string_to_ucs4($input)
     {
-        $output = array();
+        $output = [];
         $inp_len = strlen($input);
         // Input length must be dividable by 4
         if ($inp_len % 4) {
